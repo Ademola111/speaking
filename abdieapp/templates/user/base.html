@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{% block title %} {% endblock %}</title>
+  
+  <!-- External stylesheet-->
+  <link href="{{url_for('static', filename='css/abdie.css')}}" rel="stylesheet" type="text/css">
+  
+  <!-- bootstrap -->
+  <link href="{{url_for('static', filename='css/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"0 type="text/css">
+
+
+  <!-- metas-->
+  <meta charset="utf-8">
+  <meta name="description" content="Abdie Mohamod speaking to lead the next mentor">
+  <meta name="author" content="Abdie Mohamed">
+  <meta name="keywords" content="Abdie Mohamod speaking to lead the next mentor">
+  
+  <!--facebook meta integration-->
+  <meta property="og:https://#" content="Abdie Mohamod speaking to lead the next mentor"/>
+  <meta property="og:https://#" content="website"/>
+  <meta property="og:image" content="#"/>
+  <meta property="og:image-width" content="400"/>
+  <meta property="og:image-height" content="300"/>
+  <meta property="og:locale:alternative" content="fr_FR"/>
+  <meta property="og:url" content="https://#"/>
+  
+  <!-- twitter meta integeration-->
+  <meta name="#" content="#"/>
+  <meta name="twitter.title" content="#"/>
+  <meta name="twitter.card" content="Abdie Mohamod speaking to lead the next mentor"/>
+  <meta name="twitter.description" content="Abdie Mohamod speaking to lead the next mentor"/>
+  <meta name="twitter.url" content="https://#"/>
+  
+  <!-- fav icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/partners/about.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/partners/about.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/partners/about.png">
+  <link rel="manifest" href="/static/images/site.webmanifest">
+
+  <!-- font awesome -->
+  <link href="{{url_for('static', filename='fa/css/all.min.css')}}" rel="stylesheet">
+
+  <!-- jquery animation-->
+  <link href="{{url_for('static', filename='css/css/animate.min.css')}}" rel="stylesheet">
+
+  <!-- internal stylesheet-->
+  <style type="text/css"></style>
+  </head>
+  <!--end of head-->
+  <body>
+    <div class="container-fluid sticky-top">
+      <!--Navigation Section-->
+      <div class="row bg-dark">
+        <div class="col-md-12 d-flex align-items-center px-3 py-2">
+          <div class="ms-5 text-light">
+            <h1 id="logoname"><a href="#"> Abdie Mohamed </a></h1>
+          </div>
+          <div class="ms-auto generalface">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between">
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" href="{{url_for('home')}}">HOME</a>
+                    </li>
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" href="{{url_for('about')}}">ABOUT</a>
+                    </li>
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" href="{{url_for('speaking')}}">SPEAKING</a>
+                    </li>
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" href="{{url_for('coaching')}}">COACHING</a>
+                    </li>
+                    <li class="nav-item me-5">
+                      <a class="nav-link active" href="https://medium.com/@abdiemohamed">BLOG</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% block content %}
+
+
+    {% endblock %}
+    <!-- footer section -->
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col-md-12" style="background-color: #ffffff;">
+          <h1 class="brandColor text-center" style="font-size:56px;">Partners</h1>
+          <div class="mt-2 mb-2 ">
+            <img src="/static/images/Partners/image 1.png" alt="image1">
+            <img src="/static/images/Partners/image 2.png" alt="image2">
+            <img src="/static/images/Partners/image 3.png" alt="image3">
+            <img src="/static/images/Partners/image 4.png" alt="image4">
+            <img src="/static/images/Partners/image 5.png" alt="image5">
+            <img src="/static/images/Partners/image 7.png" alt="image7">
+            <img src="/static/images/Partners/image 9.png" alt="image9">
+            <img src="/static/images/Partners/image 6.png" alt="image6">
+            <img src="/static/images/Partners/image 8.png" alt="image8">
+            <img src="/static/images/Partners/image 10.png" alt="image10">
+            <img src="/static/images/Partners/image 11.png" alt="image11">
+            <img src="/static/images/Partners/image 12.png" alt="image12">
+            <img src="/static/images/Partners/image 13.png" alt="image13">
+          </div>
+        </div>
+        <div class="col-md-12 text-start generalface text-light mt-2 p-2">
+          <p> &copy; Abdie Mohamed Copyright 2025. All Right Reserved</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              
+              <div class="col col-md-6 p-2">
+                <h1 style="color: #1605FF; font-size:30px;">Book Abdie Mohamed for a Speaking Engagement.</h1>
+                <span style="color: #1605FF; font-size:large;">E-mail</span><br>
+                <p style="color: #1605FF; font-size:small;">abdiemohamed.tech@gmail.com</p>
+                <img src="/static/images/partners/form image.png" alt="form image" class="img img-fluid w-80">
+              </div>
+              
+              <div class="col-md-6">
+                
+                  <form action="{{url_for('book_appointment')}}" method="post">
+                    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                    
+                    <div class="mb-3">
+                      <label class="form-label"><b>Organization</b></label>
+                      <input class="form-control border-primary thick-on-focus" type="text" name="organisation" placeholder="Organization name" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Names (required)</b></label>
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-2">
+                          <input required class="form-control border-primary thick-on-focus" type="text" name="fname" placeholder="Firstname">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <input required class="form-control border-primary thick-on-focus" type="text" name="lname" placeholder="Lastname">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Phone</b></label>
+                      <input required class="form-control border-primary thick-on-focus" type="text" name="phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Email (required)</b></label>
+                      <input required class="form-control border-primary thick-on-focus" type="email" name="email" placeholder="Enter Email">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Message (required)</b></label>
+                      <textarea required class="form-control border-primary thick-on-focus" name="message">Drop a message for us</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Date (required)</b></label>
+                      <input class="form-control border-primary thick-on-focus" required type="date" name="date" placeholder="mm/dd/yyyy">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Budget (required)</b></label>
+                      <span class="d-block mb-1" style="font-size: 0.75rem;"><b>The Allocated Budget for the Speaking Engagement.</b></span>
+                      <input class="form-control border-primary thick-on-focus" required type="text" name="budget" placeholder="$100">
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label"><b>Duration (required)</b></label>
+                      <span class="d-block mb-1" style="font-size: 0.8rem;"><b>How long you would like the speech to be.</b></span>
+                      <select name="duration" required class="form-control border-primary thick-on-focus">
+                        <option disabled selected>Select Duration</option>
+                        <option value="5 min">5 Minutes</option>
+                        <option value="15 min">15 Minutes</option>
+                        <option value="30 min">30 Minutes</option>
+                        <option value="1 hour">1 Hour</option>
+                        <option value="2 hours">2 Hours</option>
+                        <option value="5 hours">5 Hours</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <button class="form-control btn btn-primary">Book Now</button>
+                    </div>
+                  </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jquery -->
+      <script src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+      <!-- bootstrap js bundle -->
+      <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+      <!-- js script -->
+      <script type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>

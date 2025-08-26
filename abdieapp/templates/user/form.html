@@ -1,0 +1,112 @@
+{% extends 'user/base.html' %}
+{% block title %}
+Abdie Mohamed | Form
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <span>
+                {% with m = get_flashed_messages(with_categories=true) %}
+                    {% for c, i in m %}
+                        {% if c == 'success' %}
+                        <P class="alert alert-success fw-4">{{i}} </P>
+                        {% elif c == 'warning' %}
+                        <P class="alert alert-warning fw-4">{{i}} </P>
+                        {% else %}
+                        <P class="alert alert-danger fw-4">{{i}} </P>
+                        {% endif %}
+                    {% endfor %} 
+                {% endwith %}
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-4 mb-6">
+            <div class="col col-md-6">
+                <h1 style="color: #1605FF; font-size:54px;">Book Abdie Mohamed for a Speaking Engagement.</h1>
+                <span style="color: #000000; font-size:32px;"><b>E-mail</b></span><br>
+                <p class="formemail"><a href="mailto:abdiemohamed.tech@gmail.com"><b>Abdie Mohamed</b></a></p>
+                <img src="/static/images/partners/form image.png" alt="form image" class="img img-fluid w-80">
+            </div>
+            <div class="col col-md-6">
+                <form action="{{url_for('book_appointment')}}" method="post">
+                    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+
+                    <!-- Organisation -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Organization</b></label>
+                    <input class="form-control border-primary thick-on-focus" required type="text" name="organisation" placeholder="Organization name">
+                    </div>
+
+                    <!-- Names -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Names (required)</b></label>
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-2">
+                        <input class="form-control border-primary thick-on-focus" type="text" required name="fname" value="{{fullname[0]}}" placeholder="First name" readonly>
+                        </div>
+                        <div class="col-12 col-md-6">
+                        <input class="form-control border-primary thick-on-focus" type="text" required name="lname" value="{{fullname[1]}}" placeholder="Last name" readonly>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Phone</b></label>
+                    <input class="form-control border-primary thick-on-focus" required type="text" name="phone" placeholder="Enter phone number">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Email (required)</b></label>
+                    <input class="form-control border-primary thick-on-focus" required type="email" name="email" value="{{email}}" placeholder="Enter Email" readonly>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Message (required)</b></label>
+                    <textarea class="form-control border-primary thick-on-focus" required name="message" rows="4" placeholder="Drop a message for us"></textarea>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Date (required)</b></label>
+                    <input class="form-control border-primary thick-on-focus" required type="date" name="date" placeholder="mm/dd/yyyy">
+                    </div>
+
+                    <!-- Budget -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Budget (required)</b></label>
+                    <span class="d-block mb-1" style="font-size: 0.8rem;"><b>The Allocated Budget for the Speaking Engagement.</b></span>
+                    <input class="form-control border-primary thick-on-focus" required type="text" name="budget" placeholder="$100">
+                    </div>
+
+                    <!-- Duration -->
+                    <div class="mb-3">
+                    <label class="form-label"><b>Duration (required)</b></label>
+                    <span class="d-block mb-1" style="font-size: 0.8rem;"><b>How long you would like the speech to be.</b></span>
+                    <select name="duration" required class="form-control border-primary thick-on-focus">
+                        <option disabled selected><b>Select Duration</b></option>
+                        <option value="5 min">5 Minutes</option>
+                        <option value="15 min">15 Minutes</option>
+                        <option value="30 min">30 Minutes</option>
+                        <option value="1 hour">1 Hour</option>
+                        <option value="2 hours">2 Hours</option>
+                        <option value="5 hours">5 Hours</option>
+                    </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mb-3">
+                    <button class="btn btn-primary w-100">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

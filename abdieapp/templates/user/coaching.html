@@ -1,0 +1,99 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+Abdie Mohamed | Coaching
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-start mb-4 mt-4">
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-center" style="min-height: 150px;">
+                <h3 class="quote-text;">“Every great player has a coach. No need to do this alone. Let’s get to the next level, together!”</h3>
+                <a href="#coaching"><button class="btn btn-primary text-light mt-2">Apply for Coaching session</button></a>
+            </div>
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="/static/images/partners/coaching.png" alt="coaching image" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #000000; justify-content: center;">
+        <div class="col-md-6 text-center text-light mt-5 mb-4" id="coaching">
+            <h1 class="">START YOUR COACHING ASSESSMENT</h1>
+            <p>The journey of a 1000 miles begins with a single step - Abdie Muhammad</p>
+            <p>Thank you for your interest in working with me as your coach. Please complete this quick survey, so I can learn more about you and your goals. After completion you will receive an mail to schedule a free discovery call.</p>
+            <div class="col-md-12">
+                <form action="{{url_for('coaching')}}" method="post" class="text-center">
+    
+                    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+
+                    <div class="row justify-content-center">
+                    <!-- Full Name -->
+                    <div class="col-12 col-md-8 mb-3">
+                        <input class="form-control" type="text" name="fullname" placeholder="Enter your fullname" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-12 col-md-8 mb-3">
+                        <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-12 col-md-8 mb-3">
+                        <input class="form-control" type="text" name="phone" placeholder="Enter your phone" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 col-md-8 mb-3">
+                        <button class="btn btn-primary w-100">Begin Assessment</button>
+                    </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #D9D9D9;">
+        <h1 class=" m-4" style="color: #1605FF; text-align: center;">Alumni Testimonies</h1>
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies1.png" alt="Testimonies" class="img-fluidi">
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies2.png" class="img-fluidi" alt="testimonies2.png">
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!-- send testimony -->
+         <div class="row justify-content-center text-center">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies3.png" alt="testimonies3.png" class="img-fluidi">
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies4.png" alt="testimonies4.png" class="img-fluidi">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3rd testimony -->
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="row justify-content-center">                 
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies6.png" alt="testimonies5.png" class="img-fluidi">
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mb-5">
+                        <img src="/static/images/partners/testimonies7.png" alt="testimonies6.png" class="img-fluidi">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

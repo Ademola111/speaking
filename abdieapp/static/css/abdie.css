@@ -1,0 +1,419 @@
+/* styleit css file */
+a{
+  text-decoration: none !important;
+  color:none !important;
+}
+
+div ul li a:hover{
+  color:#1605FF !important;
+  
+}
+
+@import url('{{url_for("static", filename="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")}}');
+			
+@font-face {
+  font-family: styleit;
+  src: url("../font/Poppins-Medium.woff");
+}
+@font-face {
+  font-family: styleitbold;
+  src: url("../font/Poppins-SemiBold.woff");
+}
+@font-face {
+  font-family: styleitregular;
+  src: url("../font/Poppins-Regular.woff");
+}
+
+.generalface{
+  font-family:styleit;
+}
+
+.generalface2{
+  font-family:styleitregular;
+}
+
+.generalface3{
+  font-family:styleitbold;
+}
+
+#logoname{
+  color:#FFFFFF;
+  font-family: styleitbold;
+}
+
+#logoname a {
+  color: #FFFFFF;
+}
+
+.aboutme{
+  color:#1605FF;
+  font-family: styleitbold;
+  font-size: 64px;
+}
+
+.homeP {
+  font-size: 20px; 
+  text-align: justify;
+  line-height: 1.8;
+}
+
+#footer{
+background-color:rgb(0, 0, 0);
+}
+
+.navi{
+  font-family:styleitregular, Nokora, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.brandColor{
+  color: #1605FF;
+}
+
+.video-container {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000; /* fallback in case video doesn't fill */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper video {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 1080px) {
+  .video-wrapper {
+    height: auto;
+  }
+}
+
+.bookme {
+  position:absolute;
+  top: 90%;
+  left:50%;
+  border-color: #1605FF; 
+  border-style: solid;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px; 
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color:transparent;
+  height: 232px;
+  text-align: center;
+}
+
+.booking-overlay button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1605FF;
+  color: white;
+  cursor: pointer;
+}
+
+img.img-fluidi {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.abouth1{
+  font-size: 40px;
+  color: #1605FF;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* .socials{
+  position:absolute;
+  top: 120%;
+  right:30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #FFFFFF
+} */
+
+.about-container {
+  position: relative;
+}
+
+.socials {
+  position: absolute;
+  bottom:200px;
+  /* top: 40px; */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 15px;
+}
+
+.social-link i {
+  font-size: 40px;
+  padding: 4px;
+}
+
+
+.iconsize {
+  font-size: 40px;
+  height:50px;
+  padding: 2px;
+  margin: 2px;
+}
+
+/* Optional specific colors */
+.linkedin { color: #0A66C2 !important; }
+.instagram { color: #fa3650 !important; }
+.medium { color: #FFFFFF !important; }
+
+
+.speakhead {
+  color: #1605FF;
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.heads{
+  color: #1605FF;
+  font-size: xx-large;
+}
+
+
+.video-wrappe {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
+  }
+
+  .video-wrappe video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video scales nicely */
+    border-radius: 20px;
+    border-color: #1605FF;
+    border-style: solid;
+  }
+
+.thick-on-focus:focus {
+    border: 3px solid #1605FF;
+    outline: none;
+  }
+
+input:focus, button:focus {
+  border: 2px solid #1605FF;
+  outline: none;
+}
+
+.formemail {
+  color: #1605FF !important; 
+  font-size:32px;
+}
+
+
+/* form media query for all screen  */
+/* Very small screens (≤ 320px) */
+@media (max-width: 320px) {
+  .formemail {
+    font-size: 18px;
+  }
+}
+
+/* Small phones (≤ 375px) */
+@media (max-width: 375px) {
+  .formemail {
+    font-size: 20px;
+  }
+}
+
+/* Medium phones and small tablets (≤ 480px) */
+@media (max-width: 480px) {
+  .formemail {
+    font-size: 22px;
+  }
+}
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .formemail {
+    font-size: 26px;
+  }
+}
+
+
+/* booking media query */
+@media (max-width: 575.98px) {
+  .bookme {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    margin: 5rem 5rem 0rem 5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: better readability on video */
+    text-align: center;
+  }
+
+  .bookme .form-control {
+    width: 100%;
+  }
+
+  .bookme form {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bookme {
+    position: static;
+    top: 85%;
+    width: 90%;
+    height: auto;
+    transform: none;
+    margin: 5rem 5rem 0rem 5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: better readability on video */
+    text-align: center;
+  }
+
+  .bookme .form-control {
+    width: 100%;
+  }
+
+  .bookme form {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .bookme {
+    position: static;
+    top: 88%;
+    width: 80%;
+    height: auto;
+    transform: none;
+    margin: 5rem 5rem 0rem 5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: better readability on video */
+    text-align: center;
+  }
+  .bookme form {
+    flex-direction: column;
+  }
+  .bookme .form-control {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1023.98px) {
+  .bookme {
+    position: static;
+    top: 88%;
+    width: 100%;
+    height: auto;
+    transform: none;
+    margin: 5rem 5rem 0rem 5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: better readability on video */
+    text-align: center;
+  }
+  .bookme form {
+    flex-direction: column;
+  }
+  .bookme .form-control {
+    width: 100%;
+  }
+}
+
+/* socials media query for all screens*/
+@media (max-width: 781px) {
+  .iconsize {
+    font-size: 30px;
+  }
+
+  .socials {
+    top: 350px;
+    gap: 15px;
+  }
+}
+
+
+@media (min-width:768px) and (max-width: 991.98px) {
+  .iconsize {
+    font-size: 30px;
+  }
+
+  .socials {
+    bottom: 5px;
+    gap: 10px;
+  }
+}
+
+@media (min-width:576px) and (max-width: 767.98px) {
+  .iconsize {
+    font-size: 25px;
+  }
+
+  .socials {
+    bottom: 2px;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 575.98px) {
+  .iconsize {
+    font-size: 15px;
+  }
+
+  .socials {
+    bottom: 1px;
+    gap: 2px;
+  }
+}
+
+@media (min-width:768px) and (max-width: 991.98px) {
+  .abouth1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .homeP {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (min-width:576px) and (max-width: 767.98px) {
+  .abouth1 {
+    font-size: 1.4rem;
+  }
+
+  .homeP {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) and (max-width: 575.98px) {
+  .abouth1 {
+    font-size: 1.0rem;
+  }
+
+  .homeP {
+    font-size: 0.85rem;
+  }
+}
